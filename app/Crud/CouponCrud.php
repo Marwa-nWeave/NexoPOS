@@ -211,11 +211,12 @@ class CouponCrud extends CrudService
                             value: $entry->type ?? '',
                             description: __( 'Define which type of discount apply to the current coupon.' ),
                         ),
-                        FormInput::text(
+                        FormInput::number(
                             label: __( 'Discount Value' ),
                             name: 'discount_value',
                             description: __( 'Define the percentage or flat value.' ),
                             value: $entry->discount_value ?? '',
+                            validation:'numeric'
                         ),
                         FormInput::datetime(
                             label: __( 'Valid Until' ),
@@ -229,7 +230,7 @@ class CouponCrud extends CrudService
                             description: __( 'What is the minimum value of the cart to make this coupon eligible.' ),
                             value: $entry->minimum_cart_value ?? '',
                         ),
-                        FormInput::text(
+                        FormInput::number(
                             label: __( 'Maximum Cart Value' ),
                             name: 'maximum_cart_value',
                             description: __( 'The value above which the current coupon can\'t apply.' ),
