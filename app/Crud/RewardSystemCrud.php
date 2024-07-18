@@ -463,8 +463,8 @@ class RewardSystemCrud extends CrudService
     public function getLinks(): array
     {
         return [
-            'list' => ns()->url( '/dashboard/rewards-system' ),
-            'create' => ns()->url( '/dashboard/rewards-system/create' ),
+            'list' => ns()->url( '/dashboard/customers/rewards-system' ),
+            'create' => ns()->url( '/dashboard/customers/rewards-system/create' ),
             'edit' => ns()->url( '/dashboard/rewards-system/edit/{id}' ),
             'post' => ns()->url( '/api/crud/' . $this->getMainRoute() ),
             'put' => ns()->url( '/api/crud/' . $this->getMainRoute() . '/{id}' ),
