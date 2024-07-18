@@ -6,7 +6,6 @@ use App\Http\Middleware\InstalledStateMiddleware;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Support\Facades\Route;
 
-//first comment after fork 
 Route::middleware( [
     InstalledStateMiddleware::class,
     SubstituteBindings::class,
